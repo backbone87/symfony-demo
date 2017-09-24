@@ -9,6 +9,7 @@
         "doctrine/doctrine-fixtures-bundle": "^2.3",
         "erusev/parsedown": "^1.6",
         "ezyang/htmlpurifier": "^4.9",
+        "ramsey/uuid": "^3.7",
         "sensio/framework-extra-bundle": "^3.0",
         "sensiolabs/security-checker": "^4.1",
         "symfony/asset": "^3.3",

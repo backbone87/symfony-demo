@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"
+>
+  <services>
+    <defaults autowire="true" autoconfigure="true" public="false" />
+
+    <service id="Ramsey\Uuid\UuidFactory" />
+    <service id="Ramsey\Uuid\UuidFactoryInterface" alias="Ramsey\Uuid\UuidFactory" />
+
+    <service id="app.uuid_factory_guid" class="Ramsey\Uuid\UuidFactory" public="true">
+      <argument type="service">
+        <service class="Ramsey\Uuid\FeatureSet">
+          <argument>true</argument><!-- microsoft guid byte order shuffling -->
+        </service>
+      </argument>
+    </service>
+
+  </services>
+
+</container>
